@@ -1,0 +1,135 @@
+.footer {
+    background-color: var(--sub-accent-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+
+    &-container {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &-logo {
+        color: var(--primary-white-color);
+    }
+
+    &-social {
+        margin-left: 72px;
+    }
+
+    &-descriptions {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--primary-white-color);
+    }
+
+    &-subscribe {
+        margin-left: auto;
+    }
+
+    &-label {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--primary-white-color);
+        cursor: pointer;
+    }
+}
+
+.contacts-addres {
+    margin-top: 20px;
+}
+
+.contacts-list-item:not(:first-child) {
+    margin-top: 9px;
+}
+
+.contacts-item {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--secondary-white-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-list li:first-child .contacts-item {
+    color: var(--primary-white-color);
+}
+
+.contacts-list li:first-child .contacts-item:hover,
+.contacts-list li:first-child .contacts-item:focus {
+    color: var(--accent-color);
+}
+
+.footer-item-social {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.footer-social-item-link {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    fill: var(--primary-white-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        fill: var(--primary-white-color);
+    }
+}
+
+.subscribe-items input:focus {
+    border: 1px solid var(--primary-white-color);
+}
+
+.subscribe-items {
+    display: flex;
+    margin-top: 20px;
+}
+
+.input-subscribe {
+    width: 358px;
+    height: 50px;
+    outline: none;
+    background-color: var(--sub-accent-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--primary-white-color);
+    border-radius: 4px;
+    padding: 15px 16px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+}
+
+.button-subscribe {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    border-color: transparent;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    cursor: pointer;
+    letter-spacing: 0.06em;
+    display: flex;
+    padding: 10px 28px;
+    height: 50px;
+    min-width: 200px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 12px;
+}
