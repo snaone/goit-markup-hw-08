@@ -2,19 +2,49 @@
     background-color: var(--sub-accent-color);
     padding-top: 60px;
     padding-bottom: 60px;
-    display: flex;
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        justify-content: baseline;
+    }
 
     &-container {
-        display: flex;
-        align-items: baseline;
+
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            align-items: baseline;
+        }
     }
+
+    &-block {
+        @media screen and (min-width: 768px) {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-around;      
+        }
+    }
+
+
+    &-wrapper {
+        text-align: center;
+
+        @media screen and (min-width: 1200px) {
+            text-align: inherit;
+        }
+    }
+
 
     &-logo {
         color: var(--primary-white-color);
     }
 
     &-social {
-        margin-left: 72px;
+        text-align: center;
+
+        @media screen and (min-width: 1200px) {
+            text-align: inherit;
+            margin-left: 72px;
+        }
     }
 
     &-descriptions {
@@ -24,10 +54,22 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: var(--primary-white-color);
+        margin-top: 60px;
+
+        @media screen and (min-width: 768px) {
+            margin-top: 0;
+        }
     }
 
     &-subscribe {
-        margin-left: auto;
+        text-align: center;
+        margin-top: 60px;
+
+        @media screen and (min-width: 1200px) {
+            margin-left: auto;
+            text-align: inherit;
+            margin-top: 0
+        }
     }
 
     &-label {
@@ -70,6 +112,7 @@
 .footer-item-social {
     display: flex;
     margin-top: 20px;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -95,12 +138,16 @@
 }
 
 .subscribe-items {
-    display: flex;
     margin-top: 20px;
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
+
 }
 
 .input-subscribe {
-    width: 358px;
+    width: 100%;
     height: 50px;
     outline: none;
     background-color: var(--sub-accent-color);
@@ -113,6 +160,14 @@
     line-height: 1.25;
     letter-spacing: 0.03em;
     cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+    }
 }
 
 .button-subscribe {
@@ -129,7 +184,13 @@
     padding: 10px 28px;
     height: 50px;
     min-width: 200px;
-    align-items: center;
     justify-content: space-between;
-    margin-left: 12px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 1200px) {
+        margin-top: 0;
+        margin-left: 12px;
+    }
 }

@@ -4,19 +4,24 @@
     &-container {
         display: flex;
         align-items: center;
+        min-height: 60px;
     }
     
     &-logo {
         color: var(--logo-black-color);
-        margin-right: 94px;
+        margin-right: 87px;
+
+        @include desktop {
+            margin-right: 94px;
+        }
     }
 
     &-list {
-        display: flex;
-    }
+        display: none;
 
-    &-icon {
-        margin-right: 10px;
+        @include tablet {
+            display: flex;
+        }
     }
 
     &-link {
@@ -31,7 +36,6 @@
         letter-spacing: 0.02em;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-
 }
 
 .header-item:not(:last-child) {
@@ -39,7 +43,12 @@
 }
 
 .header-contact-item:not(:last-child) {
-    margin-right: 50px;
+    margin-bottom: 10px;
+  
+    @include desktop {
+        margin-right: 50px;
+        margin-bottom: 0;
+    }
 }
 
 .header-nav .current {
@@ -59,25 +68,61 @@
 }
 
 .header-contact-list {
-    display: flex;
-    margin-left: auto;
+    display: none;
+
+    @include tablet { 
+        display: block;
+        margin-left: auto;
+    }
+
+    @include desktop {
+        display: flex;
+    }
 }
 
 .header-contact-link {
     display: flex;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
     color: var(--secondary-text-color);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: 0.02em;
     fill: var(--secondary-text-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+    @include desktop {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-size: 14px;
+    }
+
     &:hover,
     &:focus {
         fill: var(--accent-color);
+    }
+}
+
+.icon-envelope {
+    width: 14px;
+    height: 10px;
+    margin-right: 8px;
+
+    @media screen and (min-width: 1200px) {
+        width: 16px;
+        height: 12px;
+        margin-right: 10px;
+    }
+}
+
+.icon-smartphone {
+    width: 10px;
+    height: 14px;
+    margin-right: 8px;
+
+    @media screen and (min-width: 1200px) {
+        width: 10px;
+        height: 16px;
+        margin-right: 10px;
     }
 }

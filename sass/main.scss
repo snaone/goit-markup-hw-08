@@ -1,10 +1,12 @@
 @import "./utils/variables";
 @import "./utils/common";
+@import "./utils/mixins";
 
 @import "./base/logo";
 @import "./base/buttons";
 
 @import "./components/modal";
+@import "./components/mobile-menu";
 
 @import "./layouts/header";
 @import "./layouts/hero";

@@ -1,15 +1,22 @@
-.clients-title {
-    margin-bottom: 50px;
-}
-
 .clients-list {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
 }
 
+.client-item {
+    width: calc((100% - 30px) / 2);
+
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 60px) / 3);
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 150px) / 6);
+    }
+}
+
 .client-link {
-    width: 170px;
     height: 92px;
     border: 1px solid #afb1b8;
     fill: var(--socials-icons-color);
